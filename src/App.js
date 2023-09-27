@@ -1,4 +1,5 @@
 import './App.css';
+
 import Header from './components/header';
 import NavigationBar from './components/navigationBar';
 import SideBar from './components/sideBar';

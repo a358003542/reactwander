@@ -24,7 +24,7 @@
     "footer";
 }
 
-@media only screen and (min-width: 500px) {
+@media only screen and (min-width: 600px) {
   #root {
     grid-template-columns: repeat(4, 1fr);
     grid-auto-rows: minmax(50px, auto);
