@@ -17,11 +17,11 @@ function HomePage() {
     
     return (
             <article>
+                <h2>Home</h2>
                 <Button onClick={handleClick}>click me</Button>
                 <Example message={message}/>
 
-                <h2>Article heading</h2>
-
+                <br />
                 <p>
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Donec a diam
                     lectus. Set sit amet ipsum mauris. Maecenas congue ligula as quam
