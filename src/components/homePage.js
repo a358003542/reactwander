@@ -1,4 +1,5 @@
 import React from "react";
+import Button from 'react-bootstrap/Button';
 
 function Example(props){
     return <p>{props.message}</p>
@@ -16,7 +17,7 @@ function HomePage() {
     
     return (
             <article>
-                <button onClick={handleClick}>click me</button>
+                <Button onClick={handleClick}>click me</Button>
                 <Example message={message}/>
 
                 <h2>Article heading</h2>
