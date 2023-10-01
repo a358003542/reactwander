@@ -16,6 +16,7 @@ export function create_jwt_token(send_data){
         },
         body: JSON.stringify(send_data)
     }).then((response) => response.json())
+    .catch((e) => console.log(e))
 }
 
 
@@ -27,4 +28,5 @@ export function get_user_info(){
             'Authorization': `JWT ${token}`
         }
     }).then((response) => response.json())
+    .catch(e => console.log(e))
 }

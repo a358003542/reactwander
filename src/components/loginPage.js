@@ -23,17 +23,18 @@ function LoginPage(props) {
         };
 
         create_jwt_token(send_data).then((data) => {
-            const token = data['access'];
-            saveToken(token);
+            if (data) {
+                const token = data['access'];
+                saveToken(token);
 
-            get_user_info().then(data => {
-                console.log(data);
-                if (data.username){
-                  setUser(data)
-                }else{
-                  setUser(null)
-                }
+                get_user_info().then(data => {
+                    if (data.username) {
+                        setUser(data)
+                    } else {
+                        setUser(null)
+                    }
                 });
+            }
         });
     }
     return (

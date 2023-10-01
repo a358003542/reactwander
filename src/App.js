@@ -7,7 +7,8 @@ import { useState, useEffect } from 'react';
 import HomePage from './components/homePage';
 import AboutPage from './components/aboutPage';
 import LoginPage from './components/loginPage';
-import LogoutPage from './components/LogoutPage';
+import LogoutPage from './components/logoutPage';
+import ProfilePage from './components/profilePage';
 
 import { getToken, get_user_info } from './services/jwt_token';
 
@@ -18,8 +19,7 @@ function App() {
 
   useEffect(() => {
     get_user_info().then(data => {
-      console.log(data);
-      if (data.username) {
+      if (data && data.username){
         setUser(data)
       } else {
         setUser(null)
@@ -51,6 +51,8 @@ function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/login" element={<LoginPage saveToken={saveToken} setUser={setUser} />} />
           <Route path="/logout" element={<LogoutPage setUser={setUser} />} />
+
+          <Route path="/profile" element={<ProfilePage />} />
           <Route path="/about" element={<AboutPage />} />
         </Routes>
       </main>
